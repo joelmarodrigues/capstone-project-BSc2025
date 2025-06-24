@@ -1,0 +1,50 @@
+# ================================
+# FINAL PROJECT GITIGNORE CONFIG
+# ================================
+
+### Source of my emergency problem
+
+# Ignore toolkit files (not relevant for submission)
+OIDv6_ToolKit_Download_Open_Images_Support_Yolo_Format/
+
+# Ignore Python cache and environment files
+__pycache__/
+*.pyc
+env/
+venv/
+.ipynb_checkpoints/
+.vscode/
+.DS_Store
+.idea/
+
+# Ignore large raw dataset sources and downloads
+*.zip
+datasets/OIDv6/
+datasets/downloaded/
+
+#  Ignore the full contents of the datasets folder
+datasets/
+videos/
+
+
+# Ignore pre-training and inference models not used in final evaluation
+*.engine
+runs_saved/
+
+# Keep final YOLO models and evaluation results
+!checkpoints/
+!checkpoints/*.pt
+!runs/
+!runs/detect/**/weights/best.pt
+!runs/detect/**/results.png
+!runs/detect/**/confusion_matrix.png
+!runs/detect/**/results.csv
+
+# Ignore temporary and experimental runs
+runs/**/weights/last.pt
+runs/**/train_events.json
+runs/**/opt.yaml
+
+# Keep project-related CSV outputs
+!*.csv
+videos/
